@@ -8,6 +8,9 @@ import grechka from "~/images/grechka.png";
 import borshch from "~/images/borshch.png";
 import ovochyGrill from "~/images/ovochyGrill.png";
 import app from "~/images/app.png";
+import HowItWorksSection from "~/components/howItWorksSection";
+import FoodTrackingSection from "~/components/add";
+import HealthKnowledgeSection from "~/components/healthKnowledgeSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -107,6 +110,9 @@ export default function Home() {
             <>Додавайте страви усіма способами без покупки преміум аккаунта</>
           }
         />
+        <HowItWorksSection />
+        <FoodTrackingSection />
+        <HealthKnowledgeSection />
       </div>
     </main>
   );
