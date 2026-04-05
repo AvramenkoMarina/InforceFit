@@ -1,6 +1,6 @@
+import { Hero } from "~/components/hero";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
+import NutritionSection from "~/components/nutritionSection";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -9,5 +9,12 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main>
+      <Hero />
+      <div className="max-w-360 mx-auto px-37.5">
+        <NutritionSection />
+      </div>
+    </main>
+  );
 }
