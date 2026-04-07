@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="max-w-360 mx-auto px-37.5">
+      <div className="max-w-360 mx-auto md:px-37.5 px-8">
         <NutritionSection />
         <DifferencesTitle />
         <DifferenceSection

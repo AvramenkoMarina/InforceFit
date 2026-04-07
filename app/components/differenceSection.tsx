@@ -23,7 +23,7 @@ const DifferenceSection = ({
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div
-        className="text-black w-150"
+        className="text-black"
         style={{
           marginLeft: textRight ? "auto" : "",
           textAlign: textRight ? "right" : "left",

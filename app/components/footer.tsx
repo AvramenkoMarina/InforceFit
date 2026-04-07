@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import DownloadButtons from "./downloadButtons";
 import logo from "~/images/Logo.svg";
-import { InstagramIcon } from "./icons/Instagram";
+import { InstagramIcon } from "./icons/instagram";
 import { LinkedinIcon } from "./icons/linkedin";
 import { FacebookIcon } from "./icons/facebook";
 const Footer = () => {
@@ -46,7 +46,7 @@ const Footer = () => {
                 Найбільша база українських страв
               </p>
             </div>
-            <div className="flex gap-12">
+            <div className="flex gap-12 flex-col md:flex-row">
               <nav className="flex items-center gap-12 text-sm font-medium text-black">
                 <Link to="#">Про нас</Link>
                 <Link to="#">Переваги</Link>

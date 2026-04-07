@@ -52,7 +52,7 @@ export default function FoodTrackingSection() {
             Гнучкі способи фіксації вашого харчування
           </p>
         </div>
-        <div className="grid items-center gap-20 grid-cols-[574px_466px]">
+        <div className="grid items-center gap-20 grid-cols-[574fr_466fr]">
           <img src={fishImage} alt="Food" className="h-full w-full" />
 
           <div className="space-y-10">
