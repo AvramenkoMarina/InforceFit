@@ -2,11 +2,11 @@ import handIphone from "~/images/handIphoneCropped.png";
 
 export default function NutritionSection() {
   return (
-    <section className="flex gap-15 md:gap-25 mt-15 md:mt-50 flex-col md:flex-row">
+    <section className="flex gap-15 md:gap-25 mt-[60px] mb-[60px] md:mt-50 flex-col md:flex-row">
       <div className="max-w-125 flex flex-col justify-center">
         <p className="mb-4 text-[16px] font-bold ">ЛЕГКО</p>
 
-        <h2 className="mb-6 text-5xl font-bold leading-tight  md:text-5xl">
+        <h2 className="mb-6 text-[36px] font-bold leading-tight  md:text-[48px]">
           Стежте за раціоном
         </h2>
 

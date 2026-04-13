@@ -37,12 +37,12 @@ function StepCard({
   showConnector,
 }: Step & { showConnector?: boolean }) {
   return (
-    <div className="relative flex flex-col items-center text-center">
+    <div className="relative flex flex-col items-start text-left lg:items-center lg:text-center">
       {showConnector && (
-        <div className="absolute left-[calc(50%+52px)] top-8 hidden w-[calc(100%-104px)] items-center md:flex">
-          <span className="h-2.5 w-2.5 rounded-full border border-white/60 bg-[#111418]" />
-          <div className="h-px w-full bg-[repeating-linear-gradient(to_right,grey_0px,grey_6px,transparent_6px,transparent_16px)]"></div>
-          <span className="h-2.5 w-2.5 rounded-full border border-white/60 bg-[#111418]" />
+        <div className="pointer-events-none absolute left-[94px] top-8 flex w-[calc(100%-116px)] items-center lg:left-[calc(50%+102px)] lg:w-[calc(100%-164px)] lg:top-9">
+          <span className="h-4 w-4 shrink-0 rounded-full border-2 border-white/40" />
+          <div className="h-px w-full bg-[repeating-linear-gradient(to_right,rgba(255,255,255,0.4)_0px,rgba(255,255,255,0.4)_6px,transparent_6px,transparent_14px)]" />
+          <span className="h-4 w-4 shrink-0 rounded-full border-2 border-white/40" />
         </div>
       )}
 
@@ -63,7 +63,7 @@ function StepCard({
 
 export default function HowItWorksSection() {
   return (
-    <section className="mt-50 px-6 text-white md:px-10 lg:px-16">
+    <section className="py-[64px] text-white lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <h2 className="text-4xl font-bold md:text-5xl">Як це працює?</h2>
@@ -72,13 +72,14 @@ export default function HowItWorksSection() {
           </p>
         </div>
 
-        <div className="grid gap-14 md:grid-cols-3 md:gap-10 mt-20">
+        <div className="mt-20 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory px-6 pr-16 lg:px-0 lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible">
           {steps.map((step, index) => (
-            <StepCard
+            <div
               key={step.id}
-              {...step}
-              showConnector={index < steps.length - 1}
-            />
+              className="w-[280px] shrink-0 snap-start lg:w-auto lg:shrink"
+            >
+              <StepCard {...step} showConnector={index < steps.length - 1} />
+            </div>
           ))}
         </div>
       </div>

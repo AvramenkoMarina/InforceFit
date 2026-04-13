@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-white text-black">
-        <nav className="mx-auto flex h-[107px] md:h-20 max-w-[1440px] items-center justify-between px-6 md:h-30 md:px-10 xl:px-[150px]">
+        <nav className="mx-auto flex h-[107px] md:h-24 lg:h-30 max-w-[1440px] items-center justify-between px-6 md:px-10 xl:px-[150px]">
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Logo" className="h-9" />
             <span className="font-heading text-2xl font-semibold">
@@ -23,7 +23,7 @@ const Header = () => {
             </span>
           </Link>
 
-          <div className="hidden items-center font-sans text-[14px] font-bold md:flex">
+          <div className="hidden items-center font-sans text-[14px] font-bold lg:flex">
             <ul className="mr-12 flex items-center gap-12">
               <li>
                 <Link to="#">Про нас</Link>
@@ -52,7 +52,7 @@ const Header = () => {
             aria-label="Open menu"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(true)}
-            className="flex h-11 w-11 items-center justify-center rounded-full md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full lg:hidden"
           >
             <span className="sr-only">Open menu</span>
             <div className="flex flex-col gap-1.5">
@@ -64,7 +64,7 @@ const Header = () => {
       </header>
 
       <div
-        className={`fixed inset-0 z-50 bg-white text-black transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-50 bg-white text-black transition-all duration-300 lg:hidden ${
           isOpen
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-4 opacity-0"

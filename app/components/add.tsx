@@ -40,10 +40,10 @@ const items: Item[] = [
 
 export default function FoodTrackingSection() {
   return (
-    <section className="px-6 mt-50 md:px-10 lg:px-16">
+    <section className=" py-[48px] md:px-10 lg:px-16 py-[100px]">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-5xl">
+          <h2 className="mb-[28px] text-[32px] leading-[38px] font-bold md:text-5xl">
             Додавайте їжу так,
             <br /> як вам зручно
           </h2>
@@ -52,8 +52,12 @@ export default function FoodTrackingSection() {
             Гнучкі способи фіксації вашого харчування
           </p>
         </div>
-        <div className="grid items-center gap-20 grid-cols-[574fr_466fr]">
-          <img src={fishImage} alt="Food" className="h-full w-full" />
+        <div className="grid items-center gap-20 grid-cols-1 md:grid-cols-[574fr_466fr]">
+          <img
+            src={fishImage}
+            alt="Food"
+            className="w-full aspect-[574/700] object-cover rounded-2xl"
+          />
 
           <div className="space-y-10">
             {items.map((item) => (
