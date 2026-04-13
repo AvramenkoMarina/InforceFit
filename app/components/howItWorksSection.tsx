@@ -37,9 +37,9 @@ function StepCard({
   showConnector,
 }: Step & { showConnector?: boolean }) {
   return (
-    <div className="relative flex flex-col items-start text-left lg:items-center lg:text-center">
+    <div className="relative mx-auto flex max-w-[280px] flex-col items-center text-center lg:max-w-none">
       {showConnector && (
-        <div className="pointer-events-none absolute left-[94px] top-8 flex w-[calc(100%-116px)] items-center lg:left-[calc(50%+102px)] lg:w-[calc(100%-164px)] lg:top-9">
+        <div className="pointer-events-none absolute hidden items-center lg:flex lg:left-[calc(50%+102px)] lg:w-[calc(100%-164px)] lg:top-9">
           <span className="h-4 w-4 shrink-0 rounded-full border-2 border-white/40" />
           <div className="h-px w-full bg-[repeating-linear-gradient(to_right,rgba(255,255,255,0.4)_0px,rgba(255,255,255,0.4)_6px,transparent_6px,transparent_14px)]" />
           <span className="h-4 w-4 shrink-0 rounded-full border-2 border-white/40" />
@@ -72,12 +72,9 @@ export default function HowItWorksSection() {
           </p>
         </div>
 
-        <div className="mt-20 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory px-6 pr-16 lg:px-0 lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible">
+        <div className="mt-20 flex flex-col gap-10 px-6 lg:grid lg:grid-cols-3 lg:gap-10 lg:px-0">
           {steps.map((step, index) => (
-            <div
-              key={step.id}
-              className="w-[280px] shrink-0 snap-start lg:w-auto lg:shrink"
-            >
+            <div key={step.id} className="w-full lg:w-auto">
               <StepCard {...step} showConnector={index < steps.length - 1} />
             </div>
           ))}

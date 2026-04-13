@@ -3,10 +3,10 @@ import { Link } from "react-router";
 import logo from "~/images/Logo.svg";
 
 const navItems = [
-  { label: "Як це працює", to: "#" },
-  { label: "Про нас", to: "#" },
-  { label: "Переваги", to: "#" },
-  { label: "Блог", to: "#" },
+  { label: "Як це працює", to: "#how-it-works" },
+  { label: "Про нас", to: "#about" },
+  { label: "Переваги", to: "#advantages" },
+  { label: "Блог", to: "#blog" },
 ];
 
 const Header = () => {
@@ -26,16 +26,16 @@ const Header = () => {
           <div className="hidden items-center font-sans text-[14px] font-bold lg:flex">
             <ul className="mr-12 flex items-center gap-12">
               <li>
-                <Link to="#">Про нас</Link>
+                <Link to="#about">Про нас</Link>
               </li>
               <li>
-                <Link to="#">Переваги</Link>
+                <Link to="#advantages">Переваги</Link>
               </li>
               <li>
-                <Link to="#">Як це працює</Link>
+                <Link to="#how-it-works">Як це працює</Link>
               </li>
               <li>
-                <Link to="#">Блог</Link>
+                <Link to="#blog">Блог</Link>
               </li>
             </ul>
 

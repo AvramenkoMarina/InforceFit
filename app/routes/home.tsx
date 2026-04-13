@@ -31,8 +31,10 @@ export default function Home() {
     <main>
       <Hero />
       <div className="max-w-360 mx-auto md:px-37.5 px-[32px]">
-        <NutritionSection />
-        <div className="py-[60px]">
+        <section id="about">
+          <NutritionSection />
+        </section>
+        <div id="advantages" className="py-[60px]">
           <DifferencesTitle />
           <DifferenceSection
             tagBg="#828C13"
@@ -135,9 +137,13 @@ export default function Home() {
             }
           />
         </div>
-        <HowItWorksSection />
+        <section id="how-it-works">
+          <HowItWorksSection />
+        </section>
         <FoodTrackingSection />
-        <HealthKnowledgeSection />
+        <section id="blog">
+          <HealthKnowledgeSection />
+        </section>
       </div>
     </main>
   );
