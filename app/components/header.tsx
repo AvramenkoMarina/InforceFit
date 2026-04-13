@@ -4,7 +4,7 @@ import logo from "~/images/Logo.svg";
 
 const navItems = [
   { label: "Як це працює", to: "#how-it-works" },
-  { label: "Про нас", to: "#about" },
+  { label: "Про нас", to: "/#about" },
   { label: "Переваги", to: "#advantages" },
   { label: "Блог", to: "#blog" },
 ];

@@ -31,7 +31,7 @@ export default function Home() {
     <main>
       <Hero />
       <div className="max-w-360 mx-auto md:px-37.5 px-[32px]">
-        <section id="about">
+        <section id="nutrition">
           <NutritionSection />
         </section>
         <div id="advantages" className="py-[60px]">

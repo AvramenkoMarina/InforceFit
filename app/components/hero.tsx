@@ -2,7 +2,10 @@ import DownloadButtons from "./downloadButtons";
 
 export function Hero() {
   return (
-    <section className="relative bg-[url('/HeroMob.png')] md:bg-[url('/HeroNew.svg')] bg-cover bg-right md:bg-top bg-no-repeat w-full h-[80vh] md:h-screen text-black">
+    <section
+      id="about"
+      className="relative bg-[url('/HeroMob.png')] md:bg-[url('/HeroNew.svg')] bg-cover bg-right md:bg-top bg-no-repeat w-full h-[80vh] md:h-screen text-black"
+    >
       <div className="max-w-360 w-full mx-auto h-full relative">
         <div className="absolute z-10 md:top-[14%] md:w-[33%] md:left-37.5 w-full px-8 pt-8">
           <div className="w-[90%]">
