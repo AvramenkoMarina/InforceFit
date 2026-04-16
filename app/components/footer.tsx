@@ -134,14 +134,14 @@ const Footer = () => {
                 <p className="text-sm text-gray-500">
                   Copyright © 2026 UI8 LLC. All rights reserved
                 </p>
-                <Link
-                  to="https://drive.google.com/file/d/18b8iYdm7fUHPFp7aaV-7vUE-Qh_uK7p9/view?usp=drive_link"
+                <a
+                  href="/privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-black transition"
                 >
                   Privacy Policy
-                </Link>
+                </a>
                 <a
                   href="https://drive.google.com/file/d/1akpLUuJ-MbChJdAyw30DEfMDeX4aJ1PS/view?usp=drive_link"
                   target="_blank"

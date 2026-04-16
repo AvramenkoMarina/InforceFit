@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
@@ -44,11 +45,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
+  const isStandalonePage =
+    pathname === "/privacy-policy" || pathname === "/privacy-policy/";
+
   return (
     <>
-      <Header />
+      {!isStandalonePage && <Header />}
       <Outlet />
-      <Footer />
+      {!isStandalonePage && <Footer />}
     </>
   );
 }
