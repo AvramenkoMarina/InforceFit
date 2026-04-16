@@ -488,81 +488,87 @@ If our Website or our Product is enhanced, or if legal requirements should chang
   };
 
   return (
-    <main className="min-h-screen bg-[#f6f7f9] text-[#111]">
-      <section className="mx-auto max-w-4xl px-6 py-12 md:py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight">
-          PRIVACY POLICY
-        </h1>
+    <>
+      <style>{`header, footer { display: none !important; }`}</style>
+      <main className="min-h-screen bg-[#f6f7f9] text-[#111]">
+        <section className="mx-auto max-w-4xl px-6 py-12 md:py-16">
+          <h1 className="text-5xl font-extrabold tracking-tight">
+            PRIVACY POLICY
+          </h1>
 
-        <p className="mt-4 text-sm text-gray-500">
-          Effective Date of this Privacy Policy Version: 12 June 2025
-        </p>
+          <p className="mt-4 text-sm text-gray-500">
+            Effective Date of this Privacy Policy Version: 12 June 2025
+          </p>
 
-        <div className="mt-8 space-y-4 text-base leading-7 text-gray-700">
-          {blocks.map((block, index) => {
-            if (block.type === "heading") {
-              return (
-                <h2 key={index} className="mt-10 text-2xl font-bold text-black">
-                  {block.content}
-                </h2>
-              );
-            }
+          <div className="mt-8 space-y-4 text-base leading-7 text-gray-700">
+            {blocks.map((block, index) => {
+              if (block.type === "heading") {
+                return (
+                  <h2
+                    key={index}
+                    className="mt-10 text-2xl font-bold text-black"
+                  >
+                    {block.content}
+                  </h2>
+                );
+              }
 
-            if (block.type === "subheading") {
-              return (
-                <h3
-                  key={index}
-                  className="mt-6 text-lg font-semibold text-black"
-                >
-                  {block.content}
-                </h3>
-              );
-            }
+              if (block.type === "subheading") {
+                return (
+                  <h3
+                    key={index}
+                    className="mt-6 text-lg font-semibold text-black"
+                  >
+                    {block.content}
+                  </h3>
+                );
+              }
 
-            if (block.type === "list") {
-              return (
-                <ul key={index} className="list-disc pl-6 space-y-2">
-                  {(block.content as string[]).map((item) => (
-                    <li key={item}>{renderWithLinks(item)}</li>
-                  ))}
-                </ul>
-              );
-            }
+              if (block.type === "list") {
+                return (
+                  <ul key={index} className="list-disc pl-6 space-y-2">
+                    {(block.content as string[]).map((item) => (
+                      <li key={item}>{renderWithLinks(item)}</li>
+                    ))}
+                  </ul>
+                );
+              }
 
-            if (block.type === "address") {
-              return (
-                <div
-                  key={index}
-                  className="rounded-2xl bg-[#e9eef4] p-5 text-[#334155] md:p-6"
-                >
-                  <div className="space-y-2 text-sm leading-4 md:text-[16px]">
-                    {(block.content as string[]).map((line) => {
-                      if (line === "support@welmi.ai") {
-                        return (
-                          <p key={line}>
-                            <a
-                              href="mailto:support@welmi.ai"
-                              className="font-medium text-[#0b57d0] underline"
-                            >
-                              {line}
-                            </a>
-                          </p>
-                        );
-                      }
+              if (block.type === "address") {
+                return (
+                  <div
+                    key={index}
+                    className="rounded-2xl bg-[#e9eef4] p-5 text-[#334155] md:p-6"
+                  >
+                    <div className="space-y-2 text-sm leading-4 md:text-[16px]">
+                      {(block.content as string[]).map((line) => {
+                        if (line === "support@welmi.ai") {
+                          return (
+                            <p key={line}>
+                              <a
+                                href="mailto:support@welmi.ai"
+                                className="font-medium text-[#0b57d0] underline"
+                              >
+                                {line}
+                              </a>
+                            </p>
+                          );
+                        }
 
-                      return <p key={line}>{line}</p>;
-                    })}
+                        return <p key={line}>{line}</p>;
+                      })}
+                    </div>
                   </div>
-                </div>
-              );
-            }
+                );
+              }
 
-            return (
-              <p key={index}>{renderWithLinks(block.content as string)}</p>
-            );
-          })}
-        </div>
-      </section>
-    </main>
+              return (
+                <p key={index}>{renderWithLinks(block.content as string)}</p>
+              );
+            })}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

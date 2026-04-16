@@ -143,7 +143,7 @@ const Footer = () => {
                   Privacy Policy
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1akpLUuJ-MbChJdAyw30DEfMDeX4aJ1PS/view?usp=drive_link"
+                  href="/terms"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-black transition"
