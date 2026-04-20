@@ -21,8 +21,8 @@ import HealthKnowledgeSection from "~/components/healthKnowledgeSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Inforce Fit" },
+    { name: "description", content: "Welcome to Inforce Fit!" },
   ];
 }
 
