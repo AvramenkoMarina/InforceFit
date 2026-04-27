@@ -140,9 +140,9 @@ export default function Home() {
           <HowItWorksSection />
         </section>
         <FoodTrackingSection />
-        <section id="blog">
+        {/* <section id="blog">
           <HealthKnowledgeSection />
-        </section>
+        </section> */}
       </div>
     </main>
   );
