@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import { GOOGLE_PLAY_URL } from "./downloadButtons";
 import logo from "~/images/Logo.svg";
 
 const navItems = [
@@ -7,6 +8,7 @@ const navItems = [
   { label: "Про нас", to: "/#about" },
   { label: "Переваги", to: "#advantages" },
   { label: "Блог", to: "#blog" },
+  { label: "Видалити акаунт", to: "/delete-account" },
 ];
 
 const Header = () => {
@@ -15,7 +17,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-white text-black">
-        <nav className="mx-auto flex h-[107px] md:h-24 lg:h-30 max-w-[1440px] items-center justify-between px-6 md:px-10 xl:px-[150px]">
+        <nav className="mx-auto flex h-[107px] max-w-[1440px] items-center justify-between px-6 md:h-24 md:px-10 lg:h-30 xl:px-[150px]">
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Logo" className="h-9" />
             <span className="font-heading text-2xl font-semibold">
@@ -24,7 +26,7 @@ const Header = () => {
           </Link>
 
           <div className="hidden items-center font-sans text-[14px] font-bold lg:flex">
-            <ul className="mr-12 flex items-center gap-12">
+            <ul className="mr-8 flex items-center gap-8 xl:mr-12 xl:gap-12">
               <li>
                 <Link to="#about">Про нас</Link>
               </li>
@@ -39,12 +41,23 @@ const Header = () => {
               </li>
             </ul>
 
-            <Link
-              to="#"
-              className="rounded-full bg-black px-4 py-3 text-white transition hover:bg-neutral-800"
-            >
-              Завантажити
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link
+                to="/delete-account"
+                className="rounded-full border border-neutral-300 px-4 py-3 text-black transition hover:border-neutral-500"
+              >
+                Видалити акаунт
+              </Link>
+
+              <a
+                href={GOOGLE_PLAY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-black px-4 py-3 text-white transition hover:bg-neutral-800"
+              >
+                Завантажити
+              </a>
+            </div>
           </div>
 
           <button
@@ -71,7 +84,7 @@ const Header = () => {
         }`}
       >
         <div className="flex min-h-screen flex-col px-6 pb-8">
-          <div className="flex justify-between items-center h-[107px]">
+          <div className="flex h-[107px] items-center justify-between">
             <Link
               to="/"
               className="flex items-center justify-center gap-2"
@@ -119,13 +132,15 @@ const Header = () => {
             ))}
           </ul>
 
-          <Link
-            to="#"
+          <a
+            href={GOOGLE_PLAY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="flex h-12 items-center justify-center rounded-full bg-[#1A1C1E] text-[18px] font-bold text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]"
           >
             Завантажити
-          </Link>
+          </a>
         </div>
       </div>
     </>

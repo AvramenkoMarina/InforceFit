@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import DownloadButtons from "./downloadButtons";
+import DownloadButtons, { GOOGLE_PLAY_URL } from "./downloadButtons";
 import logo from "~/images/Logo.svg";
 import { InstagramIcon } from "./icons/instagram";
 import { LinkedinIcon } from "./icons/linkedin";
@@ -76,12 +76,14 @@ const Footer = () => {
                 <Link to="#">Блог</Link>
               </nav>
               <div>
-                <Link
-                  to="#"
+                <a
+                  href={GOOGLE_PLAY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 transition"
                 >
                   Завантажити
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -106,12 +108,14 @@ const Footer = () => {
                 <Link to="#">Блог</Link>
               </nav>
 
-              <Link
-                to="#"
+              <a
+                href={GOOGLE_PLAY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 transition"
               >
                 Завантажити
-              </Link>
+              </a>
 
               <div className="flex items-center gap-5 text-gray-700">
                 <Link to="#">

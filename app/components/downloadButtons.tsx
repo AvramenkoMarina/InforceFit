@@ -1,6 +1,10 @@
-import { Link } from "react-router";
 import apple from "~/images/Apple.svg";
 import playstore from "~/images/Google.svg";
+
+export const APP_STORE_URL =
+  "https://apps.apple.com/ua/app/inforcefit/id6761707875";
+export const GOOGLE_PLAY_URL =
+  "https://play.google.com/store/apps/details?id=digital.inforce.inforcefit&hl=uk";
 
 interface DownloadButtonsProps {
   justifyCenter?: boolean;
@@ -15,14 +19,14 @@ export default function DownloadButtons({
       style={{ justifyContent: justifyCenter ? "center" : "flex-start" }}
     >
       <div>
-        <Link to="#">
+        <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
           <img src={apple} alt="Download on the App Store" />
-        </Link>
+        </a>
       </div>
       <div>
-        <Link to="#">
+        <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer">
           <img src={playstore} alt="Get it on Google Play" />
-        </Link>
+        </a>
       </div>
     </div>
   );
