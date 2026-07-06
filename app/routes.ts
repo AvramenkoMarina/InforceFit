@@ -10,4 +10,8 @@ export default [
     path: "terms",
     file: "routes/terms.tsx",
   },
+  {
+    path: "delete-account",
+    file: "routes/delete-account.tsx",
+  },
 ] satisfies RouteConfig;

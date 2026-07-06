@@ -47,7 +47,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   const { pathname } = useLocation();
   const isStandalonePage =
-    pathname.startsWith("/privacy-policy") || pathname.startsWith("/terms");
+    pathname.startsWith("/privacy-policy") ||
+    pathname.startsWith("/terms") ||
+    pathname.startsWith("/delete-account");
 
   return (
     <>
